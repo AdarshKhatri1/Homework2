@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        #card{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form id="bform" >
+        <select  id="pc">
+            <option value="electronics">electronics</option>
+            <option value="furniture">furniture</option>
+            <option value="home_appliance">home appliance</option>
+            <option value="books">books</option>
+        </select>
+        <input  id="title" placeholder="Product title" >
+        <input type="text" name="" id="des" placeholder="product description">
+        <input type="text" name="" id="price" placeholder="Product price">
+        <input type="submit" name="" id="">
+    </form>
+</body>
+</html>
+
+<script>
+
+   
+document.querySelector("#bform").addEventListener("submit",details);
+
+function details(){
+    event.preventDefault();
+    
+    var pc = document.querySelector("#pc").value;
+    // orr 
+    // var pc = bform.pc.value;
+    // console.log(pc)
+
+    // Second way  To get value of input in form is
+    // id of form . id of input. value 
+    var title = bform.title.value;
+    var des = bform.des.value;
+    var price= bform.price.value
+    console.log(pc,title,des,price)
+
+    var ndiv = document.createElement("div");
+   ndiv.setAttribute("id","card");
+    
+    var h2 = document.createElement("h2");
+    h2.innerText = pc;
+
+    var p1 = document.createElement("p");
+    p1.innerText = des;
+
+    var p2 = document.createElement("p");
+    p2.innerText = price;
+
+    var p3 = document.createElement("p");
+    p3.innerText = title;
+
+    var dlt = document.createElement("button");
+    dlt.innerText="Delete";
+    dlt.addEventListener("click",abc);
+
+   ndiv.append(h2,p1,p2,p3,dlt);
+
+    document.querySelector("body").append(ndiv);
+}
+
+function abc(){
+    event.preventDefault();
+    event.target.parentNode.remove();
+}
+</script>

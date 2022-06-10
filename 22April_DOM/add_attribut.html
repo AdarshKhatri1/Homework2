@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+            #he{
+                width: 100px;
+                height: 100px;
+            }
+            #wo{
+                background-color: green;
+                border: 2px solid rebeccapurple;
+                width: 500px;
+                height: 500px;
+            }
+    </style>
+</head>
+<body>
+    <h1>Hello baby how are you</h1>
+    <div id="wo">
+        <div>
+            <div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    var div = document.createElement("div");
+    div.innerText="I am fine";
+    div.style.color= "red"
+    div.style.backgroundColor= "yellow"
+    div.setAttribute("id","he")
+    document.querySelector("div>div>div").append(div);
+</script>

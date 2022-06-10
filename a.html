@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <table>
+
+        <thead>
+            <tr>
+                <td>34535</td>
+                <td>23423</td>
+            </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+              <td>ad</td>
+              <td>sd</td>
+          </tr>
+          <tr>
+              <td>dl</td>
+              <td>lsdf</td>
+              <td>sdfj</td>
+          </tr>
+          <tr>
+              <td>dljf</td>
+              <td>ldsf</td>
+          </tr>
+        </tbody>
+    </table> -->
+    <table style="border: 1px solid red;">
+        <!-- Dont change order of columns -->
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Batch</th>
+            <th>DSA</th>
+            <th>Skillathon</th>
+            <th>Coding</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+        <!-- Append your output to tbody -->
+        </tbody>
+      </table>
+      <button>click</button>
+</body>
+</html>
+
+<script>
+// <tr>
+//               <td>dl</td>
+//               <td>lsdf</td>
+//               <td>sdfj</td>
+//           </tr>
+document.querySelector("button").addEventListener("click",func);
+
+function func(){
+    var tr = document.createElement("tr");
+document.querySelector("tbody").append(tr);
+
+var td1 = document.createElement("td");
+td1.innerText = "hello world where are you from"
+tr.append(td1)
+var td2 = document.createElement("td");
+td2.innerText = "hello world"
+tr.append(td2)
+var td3 = document.createElement("td");
+td3.innerText = "hello world"
+tr.append(td3)
+var td4 = document.createElement("td");
+td4.innerText = "hello world"
+tr.append(td4)
+var td5 = document.createElement("td");
+td5.innerText = "hello world"
+tr.append(td5)
+var td6 = document.createElement("td");
+td6.innerText = "hello world"
+tr.append(td6)
+
+}
+
+
+
+</script>

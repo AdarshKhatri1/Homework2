@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>Practise Selectors</title>
+    </head>
+    <body>
+        <h1>First H1</h1>
+        <h1>Second H1</h1>
+        <h3>First H3</h3>
+        <h3>Second H3</h3>
+        <h5>First H5</h5>
+        <h5>Second H5</h5>
+        <h5>Third H5</h5>
+        <div class="green">First DIV</div>
+        <div class="red">Second DIV</div>
+        <div class="blue">Third DIV</div>
+        <p class="green">First P</p>
+        <p class="red">Second P</p>
+        <p class="blue">Third P</p>
+        <hr/>
+        <button id="bt1">Change H1</button>
+        <button id="bt2">Change H3</button>
+        <button id="bt3">Change H5</button>
+        <button id="bt4">Change Green</button>
+        <button id="bt5">Change Red</button>
+        <button id="bt6">Change Blue</button>
+        
+    </body>
+</html>
+
+<script>
+document.querySelector("#bt1").addEventListener("click", changeh1);
+
+function changeh1(){
+    document.querySelector("h1").style.color="red";
+}
+
+document.querySelector("#bt2").addEventListener("click", changeh3);
+
+var green = document.querySelectorAll("h3");
+
+function changeh3(){
+        for(var i = 0; i<green.length;i++){
+            green[i].style.color= "green";
+        }
+}
+
+document.querySelector("#bt3").addEventListener("click", changeh5)
+
+var blue = document.querySelectorAll("h5");
+function changeh5(){
+    for(var i = 0; i<blue.length;i++){
+        blue[i].style.color= "blue";
+    }
+}
+
+
+document.querySelector("#bt4").addEventListener("click", changegreen);
+
+var cg = document.querySelectorAll(".green");
+
+function changegreen(){
+    for(var i = 0; i<cg.length;i++){
+        cg[i].style.color="green";
+    }
+}
+
+document.querySelector("#bt5").addEventListener("click", changered);
+
+var cr = document.querySelectorAll(".red");
+
+function changered(){
+    for(var i = 0; i<cr.length;i++){
+        cr[i].style.color="red"
+    }
+}
+
+document.querySelector("#bt6").addEventListener("click",changeblue);
+
+var cb= document.querySelectorAll(".blue");
+function changeblue(){
+    for(var i = 0; i<cb.length;i++){
+        cb[i].style.color="blue";
+    }
+}
+</script>

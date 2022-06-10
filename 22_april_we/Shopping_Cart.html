@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SHOPPING CART USING JS DOM</title>
+    <style>
+        #main{
+            border: 2px solid red;
+            width: 80%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(1,auto);
+            gap: 20px;
+        }
+        #main>div{
+            border: 1px solid green;
+        }
+        div>img{
+            width: 100%;
+        }
+        p{
+            padding-left: 10px;
+        }
+        p+div{
+            display: flex;
+            border:  1px solid rebeccapurple;
+            padding-left: 10px;
+        }
+        h2+p{
+            line-height: 40px;            
+            text-decoration: line-through;            
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>ADARSH KHATRI</h1>
+</body>
+</html>
+
+<script>
+    var data = [
+    {
+        imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi1.jpg.pagespeed.ic.mkSk-Af1ka.webp",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$25.00",
+        strikedOffPrice:"$95.00"
+    },{
+        imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi2.jpg.pagespeed.ic.uBrpABaJqp.webp",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$35.00",
+        strikedOffPrice:"$100.00"
+    },{
+        imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi3.jpg.pagespeed.ic.iO_cFEPy2K.webp",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$35.00",
+        strikedOffPrice:"$100.00"
+    },
+    {
+        imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi4.jpg.pagespeed.ic.kmiQW8I5wx.webp",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$35.00",
+        strikedOffPrice:"$100.00"
+    }
+]
+
+    var main = document.createElement("div");
+    main.setAttribute("id","main");
+    document.querySelector("body").append(main);
+
+    for(var i = 0; i<4;i++){
+        var div = document.createElement("div");
+        var img = document.createElement("img");
+        img.setAttribute("src",data[i].imgUrl);
+        var p = document.createElement("p");
+        p.innerText = data[i].name
+
+        var di = document.createElement("div");
+
+        var h3 = document.createElement("h2");
+        h3.innerText = data[i].price;
+        var ofp = document.createElement("p");
+        ofp.innerText = data[i].strikedOffPrice
+        di.append(h3,ofp)
+        div.append(img,p,di)
+        document.querySelector("#main").append(div)
+    }
+    
+
+
+</script>

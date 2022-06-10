@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        h2{
+            text-align: center;
+           
+        }
+        #cont{
+            width: 90%;            
+           border: 1px solid red;
+           margin: auto;
+           /* display: grid;
+           grid-template-columns: repeat(4,1fr);
+           grid-template-rows: repeat(1,auto);   */
+           display: flex;
+        }
+        #cont>div{
+            width: 25%;
+            border: 2px solid green;
+        }
+        h3{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<!-- <h2>this is innerText</h2> -->
+
+    
+</body>
+</html>
+
+<script>
+   var head =  document.createElement("h2");
+    head.innerText="Strategic Investor";
+    document.querySelector("body").append(head);
+
+    var data = [
+    {
+      avatar:
+        "https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",
+      name: "Vijay Shekhar Sharma",
+      position: "Founder & CEO",
+      logo: "https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg",
+    },
+    {
+      avatar:
+        "https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",
+      name: "Vijay Shekhar Sharma",
+      position: "Founder & CEO",
+      logo: "https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg",
+    },
+    {
+      avatar:
+        "https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",
+      name: "Vijay Shekhar Sharma",
+      position: "Founder & CEO",
+      logo: "https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg",
+    },
+    {
+      avatar:
+        "https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",
+      name: "Vijay Shekhar Sharma",
+      position: "Founder & CEO",
+      logo: "https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg",
+    }
+    ];
+
+    var ada = document.createElement("div");
+    ada.setAttribute("id","cont");
+    document.querySelector("body").append(ada);
+   
+
+
+    for(var i = 0; i<4; i++){  
+    var bc = document.createElement("div");    
+    document.querySelector("body").append(bc);
+
+    var img = document.createElement("img");
+    img.setAttribute("src",data[i].avatar)
+
+    var naame = document.createElement("h3");
+    naame.innerText= data[i].name;
+
+    var cname= document.createElement("p");
+    cname.innerText=data[i].position;
+
+    var loimg = document.createElement("img");
+    loimg.setAttribute("src",data[i].logo)
+
+    bc.append(img,naame,cname,loimg);
+    ada.append(bc);
+    }
+
+    
+    
+
+
+
+
+</script>

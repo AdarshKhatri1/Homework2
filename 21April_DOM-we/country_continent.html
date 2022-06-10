@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        *{
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <select id = "continent_select">
+        <option value = ""> Select continent </option>	
+        <option value = "India"> India </option>	
+        <option value = "United States of America"> United States of America </option>	
+        <option value = "China"> China </option>	
+        <option value = "Nepal"> Nepal </option>	
+        <option value = "Australia"> Australia </option>	
+        <option value = "France"> France </option>	
+        <option value = "Germany"> Germany </option>	
+        <option value = "South Africa"> South Africa </option>	
+        <option value = "Nigeria"> Nigeria</option>	
+        <option value = "Mexico"> Mexico</option>	
+        <option value = "Argentina"> Argentina </option>	
+        <option value = "Brazil"> Brazil </option>	
+        <option value = "Canada"> Canada</option>	
+        <option value = "Singapore"> Singapore</option>	
+        <option value = "Sweden"> Sweden</option>	
+    </select>
+    <button>Find continent</button>
+</body>
+</html>
+
+<script>
+    document.querySelector("button").addEventListener("click", showalert);
+function showalert(){
+    var cont = document.querySelector("#continent_select").value;
+    switch (cont){
+        case 'India':alert("The Continent is Asia");break;        
+        case 'United States of America':alert("The Continent is North and Central America");break;        
+        case 'China':alert("The Continent is Asia");break;        
+        case 'Nepal':alert("The Continent is Asia");break;        
+        case 'Australia':alert("The Continent is oceania");break;        
+        case 'France':alert("The Continent is Europe");break;        
+        case 'Germany':alert("The Continent is Europe");break;        
+        case 'South Africa':alert("The Continent is Africa");break;        
+        case 'Nigeria':alert("The Continent is Africa");break;        
+        case 'Mexico':alert("The Continent is North and Central America");break;        
+        case 'Argentina':alert("The Continent is South America");break;        
+        case 'Brazil':alert("The Continent is South America");break;        
+        case 'Canada':alert("The Continent is North and Central America");break;        
+        case 'Singapore':alert("The Continent is Asia");break;        
+        case 'Sweden':alert("The Continent is Europe");break;        
+    }
+}
+</script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        #main{
+            width: 50%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2,1fr
+            );
+            grid-template-rows: repeat(2,100px);
+            gap: 20px;
+        }
+        #main>div{
+            
+            border: 5px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h1>I am back</h1>
+</body>
+</html>
+
+
+<script>
+    var maindiv = document.createElement("div");
+    // maindiv.innerText= "yes done"
+    maindiv.setAttribute("id","main");
+    maindiv.style.backgroundColor="teal";
+    document.querySelector("body").append(maindiv);
+
+    for(var i = 0;i<4;i++){
+        var body = document.createElement("div");
+        body.style.backgroundColor="yellow";
+        document.querySelector("#main").append(body);
+    }
+</script>

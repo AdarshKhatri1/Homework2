@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1>locale localStorage case::object</h1>
+</body>
+</html>
+
+<script>
+    var obj = {
+        name:"adarsh",
+        class:"masai"
+    }
+    // localStorage.setItem("myobj",obj);
+    localStorage.setItem("myobj",JSON.stringify(obj));
+
+    // var getobj = localStorage.getItem("myobj");
+    // console.log(getobj)
+    // console.log(typeof getobj)// string so 
+// parse compulsory
+    var getobj = JSON.parse(localStorage.getItem("myobj"))
+    console.log(getobj)
+    console.log(typeof obj)
+    console.log(getobj.name)
+    console.log(getobj.class,"value at class")
+
+
+</script>

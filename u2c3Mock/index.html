@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>U2C3 Mock</title>
+    <style></style>
+  </head>
+  <body>
+    <form>
+      <select id="month">
+        <option value="January">JANUARY</option>
+        <option value="February">FEB</option>
+        <option value="MARCH">MARCH</option>
+        <option value="APRIL">APRIL</option>
+        <option value="MAY">MAY</option>
+        <option value="JUNE">JUNE</option>
+        <option value="JULY">JULY</option>
+        <option value="AUGUST">AUGUST</option>
+        <option value="SEPETEMBER">SEPETEMBER</option>
+        <option value="OCTOBER">OCTOBER</option>
+        <option value="NOVEMBER">NOVEMBER</option>
+        <option value="DECEMBER">DECEMBER</option>
+      </select>
+
+      <input id="income" type="number" placeholder="Enter Income" />
+
+      <input id="expense" type="number" placeholder="Enter expense" />
+
+      <input type="submit" />
+    </form>
+
+    <div id="report">
+          <!-- Append your cards here -->
+    </div>
+  </body>
+</html>
+
+<script>
+document.querySelector("form").addEventListener("submit",func);
+
+function func(){
+  event.preventDefault();
+  var a = document.querySelector("#month").value;
+  // console.log(a)
+  var b = +document.querySelector("#income").value;
+  // console.log(b);
+  var c = +document.querySelector("#expense").value;
+  // console.log(c);
+ 
+  
+  var h1 = document.createElement("h1");
+  h1.innerText = a;
+  var p1 = document.createElement("p");
+  p1.innerText = b;
+  var p2 = document.createElement("p");
+  p2.innerText = b;
+  var p3 = document.createElement("p");
+  p3.innerText = b;
+  var dlt = document.createElement("button");
+  dlt.setAttribute("Id","hjk")
+  dlt.innerText = "delete";
+ 
+  document.querySelector("#report").append(h1,p1,p2,p3,dlt);
+}
+
+
+document.querySelector("#hjk").addEventListener("click",dlete);
+function dlete(){
+  console.log("clicked me")
+  event.target.parentNode.remove();
+}
+  
+  
+  
+</script>

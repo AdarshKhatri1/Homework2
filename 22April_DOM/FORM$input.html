@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+    <form id="for">
+
+        <input id="name" type="text" placeholder="enter you name">
+        <input id="num" type="number" placeholder="enter your mobile number">
+        <input type="submit" value="Login">
+    </form>
+   
+</body>
+</html>
+
+<script>
+   document.querySelector("form").addEventListener("submit", func);
+
+   function func(){
+       event.preventDefault();
+       var a = document.querySelector("#name").value;
+       var b = document.querySelector("#num").value;
+       console.log(a,typeof(a));
+       console.log(Number(b),typeof(b));
+    //    preventDefault();
+   }
+</script>

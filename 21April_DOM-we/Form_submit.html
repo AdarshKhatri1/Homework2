@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form Submit Basic DOM</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="name">
+        <input type="text" id="age">
+        <select  id="gender">
+            <option value="male">male</option>
+            <option value="female">female</option>
+        </select>
+        <input type="text" id="email">
+        <input type="text" id="mobile">
+        <input type="submit" >
+    </form>
+
+</body>
+</html>
+
+<script>
+    document.querySelector("form").addEventListener("submit",func);
+    
+    function func(){
+        var arr = [];
+        event.preventDefault();
+        var name = document.querySelector("#name").value;
+        var age = document.querySelector("#age").value;
+        var gender = document.querySelector("#gender").value;
+        var mail = document.querySelector("#email").value;
+        var mobile = document.querySelector("#mobile").value;
+        arr.push(name,age,gender,mail,mobile)
+        console.log(arr);
+    }
+
+</script>

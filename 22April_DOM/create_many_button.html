@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h2>hello</h2>
+</body>
+</html>
+
+<script>
+    // var arr = ["primary","secodary","teriary","four"]
+    //     for(var i = 0; i<4;i++){
+    //         var but = document.createElement("button");
+    //         but.innerText = arr[i];
+    //         but.style.backgroundColor= "red";
+    //         document.querySelector("body").append(but);
+
+    //     }
+
+
+                // *******BY OBJECTS*******
+            var arr = [
+            {name:"primar",color:"red"},  
+            {name:"two",color:"green"},  
+            {name:"three",color:"yellow"},  
+            {name:"four",color:"blue"},  
+            ];
+             for(var i = 0; i<4;i++){
+            var but = document.createElement("button");
+            but.innerText = arr[i].name;
+            but.style.color = arr[i].color;
+            but.style.backgroundColor= arr[i].color;
+            document.querySelector("body").append(but);
+
+        }
+
+
+</script>

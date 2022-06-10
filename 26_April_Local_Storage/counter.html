@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>counter</title>
+
+</head>
+<body>
+    <h1>show likes and dislike here</h1>
+    <button id="dec">dicrement</button>
+    <button id="inc">increment</button>
+</body>
+</html>
+
+<script>
+    document.querySelector("#dec").addEventListener("click",decrem);
+
+    document.querySelector("#inc").addEventListener("click",incre);
+/*
+    var count = localStorage.getItem('ld');
+    console.log(count)
+
+    isse answer to jaroor aayega but good approach ni hai becoz av count ka value null print hoga but hume initially zero rakhana hai so niche wala sahi approach hai
+*/
+
+
+
+var count = localStorage.getItem('localdata')||0;
+    console.log(count)
+
+
+                        // *******or*******
+// var count = localStorage.getItem("localdata");
+// console.log(count,"start")
+//     if(localStorage.getItem("localdata")==null){
+//         count = 0;
+//     }else{
+//         count = localStorage.getItem("localdata");
+//     }
+// console.log(count,"end")
+    function decrem(){
+        count--;
+        document.querySelector("h1").innerText = count;
+        localStorage.setItem("localdata",count);
+    }
+    function incre(){
+        count++;
+        document.querySelector("h1").innerText = count;
+        localStorage.setItem("localdata",count);        
+    }
+</script>

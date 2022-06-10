@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+            #cont{
+                width: 400px;
+                /* border: 1px solid red; */
+                margin: auto;
+                display: flex;
+                justify-content: space-between;
+            }
+            #cont>div{
+                /* display: flex; */
+                /* border: 1px solid black; */
+                
+            }
+            #min,#max{
+                width: 100px;
+                height: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 30px;
+                border: 2px solid black;
+                /* margin-bottom: -15px; */
+            }
+            #min{
+                background-color: red;
+            }
+            #max{
+                background-color: green;
+            }
+            p{
+            /* border: 1px solid green; */
+            /* line-height: 25px; */
+            margin-top: 0px;
+            font-weight: bold;
+            text-align: center;
+            font-size: 25px;
+            }
+
+            #score{
+                width: 40%;
+                margin: auto;
+
+                /* border: 3px solid rebeccapurple; */
+            }
+            #score>p{
+                text-align: center;
+                margin-bottom: 0px;
+            }
+            #score>div{
+                margin: auto;
+                height: 120px;
+                width: 300px;
+                border: 2px solid black;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 30px;
+                font-weight: bold;
+                background-color: gray;
+            }
+            #key{
+                /* border: 1px solid brown; */
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                grid-template-rows: repeat(4,50px);
+                gap: 10px;
+                width: 200px;
+                margin: auto;
+                margin-top: 10px;
+            }
+            #ora{
+                background-color: orange;
+                border: 1px solid black;
+
+            }
+            #gre{
+                background-color: green;
+                border: 1px solid black;
+
+            }
+            #pur{
+                background-color: purple;
+                border: 1px solid black;
+            }
+           
+            #key>div{
+                display: flex;
+                justify-content: center;               
+                align-items: center;
+                font-weight: bold;
+                font-size: 25px;
+                /* margin-top: 10px; */        
+            }
+           
+            #enter{
+                background-color: black;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 30px;
+                width: 210px;
+                margin: auto;
+                margin-top: 10px;
+                height: 60px;
+            }
+    </style>
+</head>
+<body>
+    <div id="cont">
+        <div>
+            <div id="min"></div>
+            <p>MIN</p>
+        </div>
+        <div>
+            <div id="max"></div>
+            <p>MAX</p>
+        </div>
+    </div>
+    
+    <div id="score">
+        <P>SCORE</P>
+        <div>#</div>
+    </div>
+
+    <div id="key">
+        <div id="gre">1</div>
+        <div id="ora">2</div>
+        <div id="gre">3</div>
+        <div id="ora">4</div>
+        <div id="ora">5</div>
+        <div id="ora">6</div>
+        <div id="gre">7</div>
+        <div id="ora">8</div>
+        <div id="gre">9</div>
+        <div id="less"></div>
+        <div id="pur">0</div>
+        <div id="less"></div>
+    </div>
+    <div id="enter">ENTER</div>
+</body>
+</html>
+
+<script>
+    var key = document.querySelectorAll("#key>div");
+    // console.log(key);
+    for(var i = 0 ;i<key.length;i++){
+            key[i].addEventListener("click",press);
+        }
+        var bag = "";
+    function press(){
+        // console.log(event.target.innerText)
+        var a = event.target.innerText;
+        // if(a == ""){
+        //     bag = "";
+        // }else{
+            console.log(bag,"empty2")
+            bag+=a;
+            console.log(bag,"filled")
+            document.querySelector("#score>div").innerText= bag;
+        // }
+    }
+    document.querySelector("#enter").addEventListener("click",enterr);
+    function enterr(){
+        var min = +document.querySelector("#min").innerText;
+        var max = +document.querySelector("#max").innerText;
+        console.log(max,typeof(max),"value of max");
+        var vob = +document.querySelector("#score>div").innerText;
+
+        if(vob>max){
+            document.querySelector("#max").innerText = vob;
+            bag= "";
+        }
+        if(vob<min || min==0){
+            document.querySelector("#min").innerText = vob;
+            bag ="";
+        }else{
+            bag= "";
+        }
+
+        // var min = +document.querySelector("#min").innerText;
+        // var max = +document.querySelector("#max").innerText;
+        // console.log(max,typeof(max),"value of max");
+        
+        // var mi = Number(min);
+        // console.log(mi ,"value of min")
+        
+        // var d = document.querySelector("#score>div").innerText;
+        // var e = Number(d);
+        // console.log(Number(d),typeof(d), "value of d")
+        // console.log(max,"max");
+        // console.log(min,"min");
+        // if(e>max){
+        //     document.querySelector("#max").innerText= d;
+        //     console.log(bag)
+        //     bag = "";
+        //     console.log(bag,"empty")
+        //     min=max;
+        // }
+
+        //  if(e<min){ 
+        //     document.querySelector("#min").innerText= d;
+        //     console.log(bag)
+        //     bag="";
+        // }
+    
+        
+        
+    }
+</script>

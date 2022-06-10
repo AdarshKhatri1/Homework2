@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        *{
+            border: 0px;
+            margin: 1px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    var data = [
+        {name:"primary",color:"white",bg:"blue"},
+        {name:"Secondary",color:"white",bg:"gray"},
+        {name:"Success",color:"white",bg:"green"},
+        {name:"Danger",color:"white",bg:"red"},
+        {name:"Warning",color:"black",bg:"yellow"},
+        {name:"Info",color:"white",bg:"teal"},
+        {name:"Light",color:"black",bg:"white"},
+        {name:"Dark",color:"white",bg:"black"},
+        {name:"Link",color:"blue",bg:"whitesmoke"},
+               ];
+    
+    
+    for(var i = 0; i<data.length;i++){
+        var but = document.createElement("button");
+        but.innerText = data[i].name;
+        but.style.color= data[i].color;
+        but.style.backgroundColor=data[i].bg;
+        document.querySelector("body").append(but);
+    }
+</script>
